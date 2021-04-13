@@ -115,21 +115,16 @@ const steps = (n) => {
 
     if (n === 0) return null
 
-    let halfTree = "'"
+    let steps = "'"
 
     for (let i = 1; i <= n; i++) {
-        for (let j = 0; j < i; j++) {
-            halfTree += "#"
-        }
+        for (let j = 0; j < i; j++) steps += "#"
+        for (let k = n; k > i; k--) steps += " "
 
-        for (let k = n; k > i; k--) {
-            halfTree += " "
-        }
-
-        if (i !== n) halfTree += "'\n'"
+        if (i !== n) steps += "'\n'"
     }
 
-    return halfTree + "'"
+    return steps + "'"
 }
 
 /* 8) CHUNK
