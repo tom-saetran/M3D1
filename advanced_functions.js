@@ -125,7 +125,7 @@ const steps = n => {
     return steps + "'"
 }
 
-/* 8) CHUNK
+/* +++++8) CHUNK
 
 Given an array and chunk size, divide the array into many subarrays
 where each subarray is of length size
@@ -219,5 +219,3 @@ and returns a NxN spiral matrix.
 
 */
 const matrix = n => {}
-
-document.getElementById("").className = "col col-md-4"
