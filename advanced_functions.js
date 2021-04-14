@@ -7,7 +7,7 @@ commonly used in the string.
     maxChar("abcccccccd") === "c"
     maxChar("apple 1231111") === "1"
 */
-const maxChar = (input) => {}
+const maxChar = input => {}
 
 /* 2) ANAGRAMS
 
@@ -31,7 +31,7 @@ Given a word and a list of possible anagrams, select the correct sublist.
 
     "listen" and a list of candidates like "enlists" "google" "inlets" "banana" the program should return a list containing "inlets".
 */
-const anagrams2 = (input) => {}
+const anagrams2 = input => {}
 
 /* +++++7) REVERSE STRING
 
@@ -44,11 +44,9 @@ order of characters
     reverse('hello') === 'olleh'
     reverse('Greetings!') === '!sgniteerG'
  */
-const reverse = (input) => {
+const reverse = input => {
     let reverseInput = ""
-
     for (let i = input.length - 1; i >= 0; i--) reverseInput += input[i]
-
     return reverseInput
 }
 
@@ -65,7 +63,7 @@ ordering of numbers.
     reverseInt(-15) === -51
     reverseInt(-90) === -9
  */
-const reverseInt = (num) => {
+const reverseInt = num => {
     let minus = num < 0
     num = parseInt(reverse(Math.abs(num).toString()))
     if (minus) num = -num
@@ -84,7 +82,7 @@ and punctuation in determining if the string is a palindrome.
     palindrome("abba") === true
     palindrome("abcdefg") === false
  */
-const palindrome = (input) => {
+const palindrome = input => {
     return input === reverse(input)
 }
 
@@ -110,7 +108,7 @@ step has spaces on the right hand side!
         '### '
         '####'
 */
-const steps = (n) => {
+const steps = n => {
     n = Math.abs(n)
 
     if (n === 0) return null
@@ -134,13 +132,23 @@ where each subarray is of length size
 
 --- Examples
 
-    chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
-    chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+    chunk([1, 2, 3, 4], 2)             --> [[ 1, 2], [3, 4]]
+    chunk([1, 2, 3, 4, 5], 2)          --> [[ 1, 2], [3, 4], [5]]
     chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
-    chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
-    chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
-*/
-const chunk = () => {}
+    chunk([1, 2, 3, 4, 5], 4)          --> [[ 1, 2, 3, 4], [5]]
+    chunk([1, 2, 3, 4, 5], 10)         --> [[ 1, 2, 3, 4, 5]]
+    */
+const chunk = (array, size) => {
+    const arrayOfArrays = []
+    while (array.length > 0) {
+        const tempArray = []
+        for (let i = 0; i < size; i++) {
+            if (array.length <= 0) continue
+            tempArray.push(array.shift())
+        }
+        arrayOfArrays.push(tempArray)
+    }
+}
 
 /* +++++9) PYRAMID
 
@@ -162,7 +170,7 @@ pyramid has spaces on both the left and right hand sides
         '#####'
         
 */
-const pyramid = (n) => {
+const pyramid = n => {
     n = Math.abs(n)
 
     if (n === 0) return null
@@ -210,4 +218,6 @@ and returns a NxN spiral matrix.
         [10,  9,  8, 7]]
 
 */
-const matrix = (n) => {}
+const matrix = n => {}
+
+document.getElementById("").className = "col col-md-4"
