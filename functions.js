@@ -63,7 +63,7 @@ const newString = (input, copies) => {
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
-const cityName = (city) => {
+const cityName = city => {
     let match = city.substring(0, 3).toLowerCase()
     if (match === "los" || match === "new") return city
     return null
@@ -73,7 +73,7 @@ const cityName = (city) => {
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
-const sumFromArray = (numArray) => {
+const sumFromArray = numArray => {
     let sum = 0
     for (const element of numArray) sum += element
     return sum
@@ -83,7 +83,7 @@ const sumFromArray = (numArray) => {
 9)
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
-const testFor1And3 = (numArray) => {
+const testFor1And3 = numArray => {
     for (const element of numArray) if (element === 1 || element === 3) return true
     return false
 }
@@ -92,7 +92,7 @@ const testFor1And3 = (numArray) => {
 10)
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
 */
-const testForNot1And3 = (numArray) => {
+const testForNot1And3 = numArray => {
     return !testFor1And3(numArray)
 }
 
@@ -100,7 +100,7 @@ const testForNot1And3 = (numArray) => {
 11)
 Create a function to find the longest string from a given array of strings.
 */
-const longestStringFromArray = (stringArray) => {
+const longestStringFromArray = stringArray => {
     let longest = -Infinity
     for (const string of stringArray) if (string.length > longest) longest = string.length
     return longest
@@ -116,7 +116,7 @@ Types of angles:
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
 */
-const getAngleType = (angle) => {
+const getAngleType = angle => {
     if (angle >= 0 && angle < 90) return "Acute angle"
     if (angle === 90) return "Right angle"
     if (angle < 90 && angle > 180) return "Btuse angle"
@@ -127,7 +127,7 @@ const getAngleType = (angle) => {
 13)
 Create a function to find the index of the greatest element of a given array of integers
 */
-const findBiggestIndex = (numArray) => {
+const findBiggestIndex = numArray => {
     let biggest = -Infinity
     let biggestIndex = 0
 
@@ -145,7 +145,7 @@ const findBiggestIndex = (numArray) => {
 14)
 Create a function to get the largest even number from an array of integers.
 */
-const largestEvenNumber = (numArray) => {
+const largestEvenNumber = numArray => {
     let biggest = -Infinity
     for (const number of numArray) if (number % 2 === 0 && number > biggest) biggest = number
     return number
@@ -163,7 +163,7 @@ const checkUnevenSign = (num1, num2) => {
 16)
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
 */
-const stringCasing = (string) => {
+const stringCasing = string => {
     string = string.toUpperCase()
     if (string.length >= 3) string.substring(0, 3).toLowerCase()
     return string
@@ -195,7 +195,7 @@ this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
 this would be "34".
 */
-const factorOutput = (num1) => {
+const factorOutput = num1 => {
     let output = null
 
     if (num1 % 7 === 0) output += "Stefano"
@@ -209,10 +209,10 @@ const factorOutput = (num1) => {
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 */
-const makeAcronym = (string) => {
+const makeAcronym = string => {
     return string
         .toLowerCase()
         .split(" ")
-        .map((word) => word.charAt(0).toUpperCase())
+        .map(word => word.charAt(0).toUpperCase())
         .join("")
 }
